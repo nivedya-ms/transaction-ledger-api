@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# SQLite database files (created at runtime)
+*.db
+*.db-wal
+*.db-shm
+
+# macOS
+.DS_Store

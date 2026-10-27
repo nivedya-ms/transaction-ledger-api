@@ -1,0 +1,28 @@
+[project]
+name = "ledger-api"
+version = "0.1.0"
+description = "Backend API for a simple transaction ledger (accounts, credit/debit, balances, history)."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.162.0",
+    "sqlalchemy>=2.1.6",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+]
+
+# Treat this as an application, not an installable library: uv manages the
+# environment and dependencies but does not build/install the project itself.
+# The server and tests find the package via the source dir (see run commands
+# in the README and `pythonpath` below), so there's no fragile editable install.
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
