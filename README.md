@@ -8,6 +8,19 @@ as the primary design goal.
 
 ---
 
+## Demo
+
+Create an account, credit it, debit it, check the balance — real `curl` requests
+against the running API:
+
+![Terminal demo: create account, credit, debit, check balance](assets/demo.gif)
+
+Auto-generated interactive API docs (Swagger UI), served at `/docs`:
+
+![Swagger UI listing all endpoints](assets/swagger.png)
+
+---
+
 ## Running it
 
 Prerequisite: [uv] installed (`brew install uv`). uv fetches the right Python and
